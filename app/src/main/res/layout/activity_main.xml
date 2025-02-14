@@ -55,6 +55,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="navegarParaPaginaInicialLogin"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayoutPassword"
         app:layout_constraintHorizontal_bias="0.0"
@@ -62,11 +63,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/navegarRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:onClick="navegarParaRegistro"
         android:text="Cadastre-se"
+        android:textColor="#A40FBE"
         app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
         app:layout_constraintStart_toStartOf="@+id/buttonLogin"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />

@@ -2,5 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="bluelight">#09A7BC</color>
+    <color name="bluelight">#98BDC7</color>
+    <color name="blueheavy">#014354</color>
 </resources>

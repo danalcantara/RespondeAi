@@ -7,13 +7,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.respondeai.databinding.ActivityMainBinding
+import com.example.respondeai.databinding.ActivityRegisterBinding
 
-class MainActivity : AppCompatActivity() {
-
-   val binding by lazy {
-       ActivityMainBinding.inflate(layoutInflater)
-   }
+class RegisterActivity : AppCompatActivity() {
+    val binding by lazy {
+        ActivityRegisterBinding.inflate(layoutInflater)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,10 +23,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
-    fun navegarParaRegistro(view:View){
-        startActivity(Intent(this, RegisterActivity::class.java))
-    }
-    fun navegarParaPaginaInicialLogin(view:View){
+    fun navegarParaPaginaInicialRegistro(view:View){
         startActivity(Intent(this, ChoiceModeActivity::class.java))
     }
 }
