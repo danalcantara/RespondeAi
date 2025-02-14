@@ -84,13 +84,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="88dp"
-        android:background="#F10606"
+        android:backgroundTint="#9C0202"
         android:text="Desistir"
-        android:textColor="#E60A0A"
-        android:textColorHighlight="#E90707"
-        android:textColorHint="#E81313"
-        android:textColorLink="#F44336"
         app:layout_constraintEnd_toEndOf="@+id/Item_3"
-        app:layout_constraintTop_toBottomOf="@+id/Item_3"
-        app:strokeColor="#F44336" />
+        app:layout_constraintTop_toBottomOf="@+id/Item_3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
