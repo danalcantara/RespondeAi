@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -38,6 +39,11 @@ android {
 }
 
 dependencies {
+
+        implementation("com.google.android.gms:play-services-auth:20.0.1") // Dependência do Play Services Auth
+        implementation("com.google.android.gms:play-services-base:18.0.1") // Base services do Google
+
+
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")

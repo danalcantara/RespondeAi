@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.respondeai" />
+                  <option name="mobileSdkAppId" value="1:70717549240:android:095df3be8d25102b2de24d" />
+                  <option name="projectId" value="respondeai-fcd73" />
+                  <option name="projectNumber" value="70717549240" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

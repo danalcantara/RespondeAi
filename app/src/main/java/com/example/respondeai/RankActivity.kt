@@ -1,5 +1,6 @@
 package com.example.respondeai
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,11 +11,15 @@ import com.example.respondeai.Adapter.RankAdapter
 import com.example.respondeai.Model.Usuario
 import com.example.respondeai.databinding.ActivityAddQuestionBinding
 import com.example.respondeai.databinding.ActivityRankBinding
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class RankActivity : AppCompatActivity() {
     val binding by lazy {
         ActivityRankBinding.inflate(layoutInflater)
     }
+    private val firestore: FirebaseFirestore by lazy { Firebase.firestore }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,24 +30,18 @@ class RankActivity : AppCompatActivity() {
             insets
         }
         inicializarRank()
+        binding.btnVoltar.setOnClickListener {
+            startActivity(Intent(this, ChoiceModeActivity::class.java))
+            finish()
+        }
     }
 
     private fun inicializarRank() {
-        val usuarios = mutableListOf(
-            Usuario("1", "Alice Silva", "alice@email.com", 150),
-            Usuario("2", "Bruno Souza", "bruno@email.com", 200),
-            Usuario("3", "Carlos Mendes", "carlos@email.com", 180),
-            Usuario("4", "Daniela Lima", "daniela@email.com", 220),
-            Usuario("5", "Eduardo Castro", "eduardo@email.com", 170),
-            Usuario("6", "Fernanda Rocha", "fernanda@email.com", 250),
-            Usuario("7", "Gabriel Alves", "gabriel@email.com", 190),
-            Usuario("8", "Helena Martins", "helena@email.com", 210),
-            Usuario("9", "Igor Ferreira", "igor@email.com", 160),
-            Usuario("10", "Juliana Costa", "juliana@email.com", 230)
-        )
+        val listaUsuarios = intent.getSerializableExtra("listaRank") as? ArrayList<Usuario>
+
 
         binding.rvRank.apply {
-            adapter = RankAdapter(usuarios.sortedByDescending { it.Pontuacao })
+            adapter = RankAdapter(listaUsuarios?.sortedByDescending { it.pontuacao.toInt() }!!)
             layoutManager = LinearLayoutManager(context)
         }
     }

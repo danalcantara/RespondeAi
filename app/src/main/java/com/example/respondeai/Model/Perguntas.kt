@@ -1,9 +1,15 @@
 package com.example.respondeai.Model
 
-data class Perguntas(
+import java.io.Serializable
 
+data class Perguntas(
     val pergunta: String,
-    val itemCerto:String,
-    val itemErrado1:String,
-    val itemErrado2:String
-)
+    val item1:String,
+    val item2:String,
+    val item3:String,
+    val respCerta:String
+):Serializable {
+    // Construtor sem argumentos, necessário para o Firestore
+    constructor() : this("", "", "", "", ""
+    )
+}

@@ -17,7 +17,7 @@ class RankAdapter(val listaUsuarios: List<Usuario>): Adapter<RankAdapter.RankAda
     inner class RankAdapterViewHolder(val view: ItemRankBinding): ViewHolder(view.root){
         fun bind(usuario: Usuario, position: Int){
             view.nome.text = usuario.nome
-            view.Pontuacao.text = usuario.Pontuacao.toString()
+            view.Pontuacao.text = usuario.pontuacao
             view.rank.text = (position + 1).toString()
         }
     }

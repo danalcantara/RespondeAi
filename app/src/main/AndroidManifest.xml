@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".ViewModels.VmAplicacao"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RespondeAi"
         tools:targetApi="31">
+
+
+    <activity
+            android:name=".TelaCarregamento"
+            android:exported="false" />
         <activity
             android:name=".RankActivity"
             android:exported="false" />

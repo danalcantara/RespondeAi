@@ -20,7 +20,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="80dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="8dp"
         android:padding="1.dp"
@@ -67,7 +67,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/respostaCertaContainer"
         android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:padding="1.dp"
@@ -86,7 +86,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/respostaErradaContainer"
         android:layout_width="0dp"
-        android:layout_height="45.dp"
+        android:layout_height="80.dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:padding="1.dp"
@@ -105,7 +105,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/respostaErradaContainer2"
         android:layout_width="0dp"
-        android:layout_height="45.dp"
+        android:layout_height="80.dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:padding="1.dp"
