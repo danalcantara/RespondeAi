@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 binding.editTextPassword.text.toString()
             ).addOnSuccessListener {
                 Toast.makeText(this, "Logado com Sucesso", Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, ChoiceModeActivity::class.java))
+                startActivity(Intent(this, TelaCarregamento::class.java))
             }.addOnFailureListener {
                 Toast.makeText(this, "Login Falhou", Toast.LENGTH_SHORT).show()
             }
